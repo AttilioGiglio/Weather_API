@@ -1,10 +1,25 @@
-import React from 'react';
-import './App.css';
+import React, { Fragment } from 'react';
+import Header from './Components/Header'
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <Fragment>
+      <Header
+        titulo='Clima React App'
+      />
+      <div className='contenedor-form'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col m6 s12'>
+              1
+            </div>
+            <div className='col m6 s12'>
+              2
+            </div>
+          </div>
+        </div>
+      </div>
+    </Fragment>
   );
 }
 
