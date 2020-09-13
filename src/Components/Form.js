@@ -9,7 +9,6 @@ const Form = () => {
     const {ciudad,pais} = search;
     const handleChange = (e) => {
         // actualizar el state
-        // console.log(e.target.value)
         setSearch({
             ...search, [e.target.name] : e.target.value
         });
