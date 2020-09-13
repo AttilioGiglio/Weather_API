@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import Form from './Components/Form';
 import Header from './Components/Header'
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
         <div className='container'>
           <div className='row'>
             <div className='col m6 s12'>
-              1
+             <Form />
             </div>
             <div className='col m6 s12'>
               2

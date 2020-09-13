@@ -2,9 +2,19 @@ import React from 'react'
 
 const Form = () => {
     return (
-        <div>
-            
-        </div>
+        <form className='input-field col s12'>
+            <input
+            type='text'
+            name='ciudad'
+            id='ciudad'
+            />
+            <label htmlFor='ciudad'>Ciudad:</label>
+            <div className='input-field col s12'>
+                <select name='pais' id='pais'>
+                    <option value=''>-- Seleccione un pais --</option>
+                </select>
+            </div>
+        </form>
     )
 }
 
