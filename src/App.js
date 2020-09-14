@@ -24,6 +24,7 @@ const { ciudad, pais } = search;
       const respuesta = await fetch(url);
       const resultado = await respuesta.json();
       setResult(resultado)}
+      setAsk(false);
     }
     consultarAPI();
     }, [ask, ciudad, pais])
