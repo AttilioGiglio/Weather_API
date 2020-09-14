@@ -1,3 +1,5 @@
+Link to site: https://vigorous-sinoussi-af6adf.netlify.app/ (Deployed with Netlify)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
