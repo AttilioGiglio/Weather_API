@@ -1,8 +1,21 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import Form from './Components/Form';
 import Header from './Components/Header'
 
 function App() {
+  const [search, setSearch] = useState({
+    ciudad: '',
+    pais: ''
+});
+
+const { ciudad, pais } = search;
+
+const [ask, setAsk] = useState(false); 
+
+    useEffect(() => {
+      
+    }, [ask])
+
   return (
     <Fragment>
       <Header
@@ -12,7 +25,10 @@ function App() {
         <div className='container'>
           <div className='row'>
             <div className='col m6 s12'>
-             <Form />
+             <Form 
+             search={search}
+             setSearch={setSearch}
+             />
             </div>
             <div className='col m6 s12'>
               2

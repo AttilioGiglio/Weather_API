@@ -1,17 +1,12 @@
 import React, { useState } from 'react'
 
-const Form = () => {
-    
-    const [search, setSearch] = useState({
-        ciudad: '',
-        pais: ''
-    })
+const Form = ({search, setSearch, setAsk}) => {
 
     const [error, setError] = useState(false)
-    
-    // extraer ciudad y pais
-    const { ciudad, pais } = search;
-    
+
+        // extraer ciudad y pais
+        const { ciudad, pais } = search;
+
     // funcion que coloca los elementos en el state
     const handleChange = (e) => {
         // actualizar el state
@@ -29,6 +24,7 @@ const Form = () => {
         }
         setError(false);
         // Pasar los cambios al component principal
+        setAsk(true);
     }
 
     return (
