@@ -37,7 +37,8 @@ function App() {
       }
     }
     consultarAPI();
-  }, [ask, ciudad, pais])
+    // eslint-disable-next-line
+  }, [ask])
 
   let componente;
   if (error) {
