@@ -13,8 +13,16 @@ const { ciudad, pais } = search;
 const [ask, setAsk] = useState(false); 
 
     useEffect(() => {
-      
-    }, [ask])
+      const consultarAPI = async () => {
+      if(ask){
+      const appId = '2ce81b5a2b3517cc2b2ec2f81334e625';
+      const url = `http://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appId}`;
+      const respuesta = await fetch(url);
+      const resultado = await respuesta.json();
+      console.log(resultado)}
+    }
+    consultarAPI();
+    }, [ask, ciudad, pais])
 
   return (
     <Fragment>
@@ -28,6 +36,7 @@ const [ask, setAsk] = useState(false);
              <Form 
              search={search}
              setSearch={setSearch}
+             setAsk={setAsk}
              />
             </div>
             <div className='col m6 s12'>
